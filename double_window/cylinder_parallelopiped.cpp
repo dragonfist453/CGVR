@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
-#include <gl\glut.h>
+#include <GLUT/glut.h>
 using namespace std;
 
 int window1, window2, t;
@@ -24,16 +24,16 @@ void display_cylinder() {
 	int xc = 150;
 	int radius = 50;
 	int yc = 100;
-	for(float y=0;y<100;y+=0.25) {
-		if(y<5) {
-			glColor3f(1,0,0);
-		}
-		if(y>=5 && y<=95) {
-			glColor3f(0,1,0);
-		}
-		if(y>95) {
-			glColor3f(1,0,0);
-		}
+	for(float y=0;y<50;y+=2) {
+		// if(y<5) {
+		// 	glColor3f(1,0,0);
+		// }
+		// if(y>=5 && y<=95) {
+		// 	glColor3f(0,1,0);
+		// }
+		// if(y>95) {
+		// 	glColor3f(1,0,0);
+		// }
 		draw_circle(xc,yc+y,radius);
 	}
 	glFlush();
@@ -55,19 +55,20 @@ void display_parallelopiped() {
 	float x_off=100,y_off=100;
 	float w=100,h=80;
 	
-	for(x=0,y=0;x<50,y<50;x+=w/100,y+=h/100) {
-		if(x<2) {
-			glColor3f(0,1,0);
-			draw_rectangle(x+x_off,y+y_off,w,h,GL_POLYGON);
-		}
-		if(x>=1 && x<49) {
-			glColor3f(0,0,1);
-			draw_rectangle(x+x_off,y+y_off,w,h,GL_LINE_LOOP);
-		}
-		if(x==49) {
-			glColor3f(1,0,0);
-			draw_rectangle(x+x_off,y+y_off,w,h,GL_POLYGON);
-		}
+	for(x=0,y=0;x<50,y<50;x+=2*w/100,y+=2*h/100) {
+		// if(x<2) {
+		// 	glColor3f(0,1,0);
+		// 	draw_rectangle(x+x_off,y+y_off,w,h,GL_POLYGON);
+		// }
+		// if(x>=1 && x<49) {
+		// 	glColor3f(0,0,1);
+		// 	draw_rectangle(x+x_off,y+y_off,w,h,GL_LINE_LOOP);
+		// }
+		// if(x==49) {
+		// 	glColor3f(1,0,0);
+		// 	draw_rectangle(x+x_off,y+y_off,w,h,GL_POLYGON);
+		// }
+		draw_rectangle(x+x_off,y+y_off,w,h,GL_LINE_LOOP);
 	}
 
 	glFlush();

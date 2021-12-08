@@ -1,13 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
-#include <gl\glut.h>
+#include <GLUT/glut.h>
 using namespace std;
 
 int window1, window2, t;
 static GLfloat spin=0.0;
 
 void spinDisplay() {
-	spin+=0.02;
+	spin+=0.2;
 	glutPostRedisplay();
 }
 
@@ -18,9 +18,13 @@ void display() {
 	glLoadIdentity();
 	glRotatef(spin,0,0,1);
 	glBegin(GL_POLYGON);
+	glColor3f(1.0,0.0,0.0);
 	glVertex3f(-0.25,-0.25,0.25);
+	glColor3f(0.0,1.0,0.0);
 	glVertex3f(0.25,-0.25,0.25);
+	glColor3f(0.0,0.0,1.0);
 	glVertex3f(0.25,0.25,0.25);
+	glColor3f(1.0,0.0,1.0);
 	glVertex3f(-0.25,0.25,0.25);
 	glEnd();
 	glPopMatrix();
