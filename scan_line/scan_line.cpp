@@ -1,7 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-#include <GLUT/glut.h>
+#include <GL/gl.h>
+#include <GL/glut.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define MAX_POINTS 100
 
@@ -11,7 +13,7 @@ point p[MAX_POINTS];
 static float intx[10] = {0};
 
 void drawLine(float x1, float y1, float x2, float y2) {
-    for(int i=0;i<1000000;i++);
+    for(int i=0;i<10000000;i++);
     glColor3f(0,0,1);
     glBegin(GL_LINES);
     glVertex2f(x1, y1);

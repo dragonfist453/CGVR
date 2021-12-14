@@ -1,8 +1,8 @@
 all:
-	g++ -framework OpenGL -framework GLUT -o scan_line scan_line.cpp
+	g++ -o scan_line scan_line.cpp -lglut -lGL -lGLU -lm
 
 scan_line:
-	g++ -framework OpenGL -framework GLUT -o scan_line scan_line.cpp
+	g++ -o scan_line scan_line.cpp -lglut -lGL -lGLU -lm
 
 clean:
 	rm -f scan_line
